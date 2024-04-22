@@ -1,0 +1,20 @@
+{
+  "name": "lightBNB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhuynh17/lightBNB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhuynh17/lightBNB/issues"
+  },
+  "homepage": "https://github.com/rhuynh17/lightBNB#readme"
+}
