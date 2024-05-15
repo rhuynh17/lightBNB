@@ -10,7 +10,7 @@ const pool = new Pool({
   port: 5432, 
 });
 
-
+pool.query(`SELECT title FROM properties LIMIT 10;`).then(response => {console.log(response)})
 
 module.exports = pool;
 
@@ -31,7 +31,7 @@ const getUserWithEmail = function (email) {
       return result.rows[0]; 
     })
     .catch((err) => {
-      console.error(err.message);
+      console.error(err.msg);
       throw err;
     });
 };
