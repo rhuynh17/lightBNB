@@ -50,8 +50,8 @@ app.get('/api/users/id/:id', (req, res) => {
     });
 });
 
-const apiRoutes = require("./routes/apiRoutes");
-const userRoutes = require("./routes/userRoutes");
+const apiRoutes = require("./routes/apiRoutes.js");
+const userRoutes = require("./routes/userRoutes.js");
 
 // /api/endpoints
 app.use("/api", apiRoutes);
