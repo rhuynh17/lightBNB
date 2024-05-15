@@ -1,5 +1,5 @@
 const path = require("path");
-const express = rLightBnB_WebApp-masterequire("express");
+const express = require("express");
 const cookieSession = require("cookie-session");
 const { getUserWithEmail, getUserWithId, addUser } = require('./db/database.js');
 
