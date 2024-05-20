@@ -1,55 +1,38 @@
+
 # LightBnB
+LightBnB is a simple, multi-page AirBnB clone.
 
-## Project Structure
+## Introduction
+LightBnB is a web application that uses server-side JavaScript to deliver its functionality. By using Node.js and the pg module, LightBnB efficiently integrates with PostgreSQL databases to retrieve and display information for the user experience.
 
-```
-.
-├── db
-│   ├── json
-│   └── database.js
-├── public
-│   ├── javascript
-│   │   ├── components 
-│   │   │   ├── header.js
-│   │   │   ├── login_form.js
-│   │   │   ├── new_property_form.js
-│   │   │   ├── property_listing.js
-│   │   │   ├── property_listings.js
-│   │   │   ├── search_form.js
-│   │   │   └── signup_form.js
-│   │   ├── libraries
-│   │   ├── index.js
-│   │   ├── network.js
-│   │   └── views_manager.js
-│   ├── styles
-│   │   ├── main.css
-│   │   └── main.css.map
-│   └── index.html
-├── routes
-│   ├── apiRoutes.js
-│   └── userRoutes.js
-├── styles  
-│   ├── _forms.scss
-│   ├── _header.scss
-│   ├── _property-listings.scss
-│   └── main.scss
-├── .gitignore
-├── package-lock.json
-├── package.json
-├── README.md
-└── server.js
-```
+## Project Information
+This project was developed as part of the curriculum at Lighthouse Labs. It serves as an educational exercise and may include specific requirements or constraints defined by the course instructors. The primary objective of this project is to provide hands-on experience with emphasis on back-end development, focusing on database integration and server-side development using modern JavaScript technologies.
 
-* `db` contains all the database interaction code.
-  * `json` is a directory that contains a bunch of dummy data in `.json` files.
-  * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
-* `public` contains all of the HTML, CSS, and client side JavaScript. 
-  * `index.html` is the entry point to the application. It's the only html page because this is a single page application.
-  * `javascript` contains all of the client side javascript files.
-    * `index.js` starts up the application by rendering the listings.
-    * `network.js` manages all ajax requests to the server.
-    * `views_manager.js` manages which components appear on screen.
-    * `components` contains all of the individual html components. They are all created using jQuery.
-* `routes` contains the router files which are responsible for any HTTP requests to `/users/something` or `/api/something`. 
-* `styles` contains all of the sass files. 
-* `server.js` is the entry point to the application. This connects the routes to the database.
+## Installation
+Clone the repository:
+`git clone git@github.com:rhuynh17/lightBNB.git`
+Navigate to the project directory:
+`cd lightBNB`
+Install dependencies:
+`npm install`
+
+## Start 
+To start the server, run:
+`npm run start`
+or running the server with automatic restart on changes, run:
+`npm run local`
+Open your web browser and navigate to http://localhost:3000
+
+## Dependencies
+express: Fast, minimalist web framework for Node.js.
+cookie-session: Simple cookie-based session middleware for Express.
+bcrypt: A library to help you hash passwords.
+nodemon: Monitor for any changes in your source and automatically restart your server.
+pg: Non-blocking PostgreSQL client for Node.js.
+
+## Contributors
+Ryan Huynh (https://github.com/rhuynh17)
+
+## Acknowledgments
+This project includes code provided by Lighthouse Labs.
+

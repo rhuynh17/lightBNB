@@ -1,6 +1,8 @@
 const properties = require("./json/properties.json");
 const users = require("./json/users.json");
 const { Pool } = require('pg');
+const fs = require('fs');
+const path = require('path');
 
 const pool = new Pool({
   user: 'labber',
@@ -149,7 +151,7 @@ const getAllProperties = function (options, limit = 10) {
 
   if (options.maximum_price_per_night) {
     queryParams.push(options.maximum_price_per_night * 100); 
-    whereConditions.push(`cost_per_night <= $${queryParams.length}`);
+    havingConditionsConditions.push(`cost_per_night <= $${queryParams.length}`);
   }
 
   if (options.minimum_rating) {
@@ -195,6 +197,9 @@ const addProperty = function (property) {
       throw err;
     });
 };
+
+
+
 
 
 module.exports = {
