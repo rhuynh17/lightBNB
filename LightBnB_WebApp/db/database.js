@@ -130,21 +130,21 @@ const getAllProperties = function (options, limit = 10) {
   LEFT JOIN property_reviews ON properties.id = property_reviews.property_id
   `;
 
-  const whereConditions = [];
+  let havingConditions = [];
 
   if (options.city) {
     queryParams.push(`%${options.city}%`);
-    whereConditions.push(`city LIKE $${queryParams.length}`);
+    havingConditions.push(`city LIKE $${queryParams.length}`);
   }
 
   if (options.owner_id) {
     queryParams.push(options.owner_id);
-    whereConditions.push(`owner_id = $${queryParams.length}`);
+    havingConditions.push(`owner_id = $${queryParams.length}`);
   }
 
   if (options.minimum_price_per_night) {
     queryParams.push(options.minimum_price_per_night * 100); 
-    whereConditions.push(`cost_per_night >= $${queryParams.length}`);
+    havingConditions.push(`cost_per_night >= $${queryParams.length}`);
   }
 
   if (options.maximum_price_per_night) {
@@ -154,11 +154,12 @@ const getAllProperties = function (options, limit = 10) {
 
   if (options.minimum_rating) {
     queryParams.push(options.minimum_rating);
-    whereConditions.push(`avg(property_reviews.rating) >= $${queryParams.length}`);
+    havingConditions.push(`avg(property_reviews.rating) >= $${queryParams.length}`);
   }
+  
 
-  if (whereConditions.length > 0) {
-    queryString += `WHERE ${whereConditions.join(' AND ')} `;
+  if (havingConditions.length > 0) {
+    queryString += `WHERE ${havingConditions.join(' AND ')} `;
   }
 
   queryParams.push(limit);
