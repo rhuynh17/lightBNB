@@ -8,6 +8,12 @@ LightBnB is a web application that uses server-side JavaScript to deliver its fu
 ## Project Information
 This project was developed as part of the curriculum at Lighthouse Labs. It serves as an educational exercise and may include specific requirements or constraints defined by the course instructors. The primary objective of this project is to provide hands-on experience with emphasis on back-end development, focusing on database integration and server-side development using modern JavaScript technologies.
 
+## Screenshots
+![Log in / Nav Bar ](https://github.com/rhuynh17/lightBNB/blob/master/images/Xpgrceg.png?raw=true)
+
+![Listings](https://github.com/rhuynh17/lightBNB/blob/master/images/0q3MMNt.png?raw=true)
+
+
 ## Installation
 Clone the repository:
 `git clone git@github.com:rhuynh17/lightBNB.git`
