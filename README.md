@@ -17,8 +17,10 @@ This project was developed as part of the curriculum at Lighthouse Labs. It serv
 ## Installation
 Clone the repository:
 `git clone git@github.com:rhuynh17/lightBNB.git`
+
 Navigate to the project directory:
 `cd lightBNB`
+
 Install dependencies:
 `npm install`
 
