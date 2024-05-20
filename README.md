@@ -23,17 +23,24 @@ Install dependencies:
 `npm install`
 
 ## Start 
+
 To start the server, run:
 `npm run start`
+
 or running the server with automatic restart on changes, run:
 `npm run local`
+
 Open your web browser and navigate to http://localhost:3000
 
 ## Dependencies
 express: Fast, minimalist web framework for Node.js.
+
 cookie-session: Simple cookie-based session middleware for Express.
+
 bcrypt: A library to help you hash passwords.
+
 nodemon: Monitor for any changes in your source and automatically restart your server.
+
 pg: Non-blocking PostgreSQL client for Node.js.
 
 ## Contributors
